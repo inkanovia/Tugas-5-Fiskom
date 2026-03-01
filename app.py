@@ -12,7 +12,7 @@ st.markdown("Dashboard ini menampilkan visualisasi dari data simulasi 50 siswa d
 # Load Data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data_simulasi_50_siswa_20_soal.xlsx - Sheet1.csv')
+    df = pd.read_excel('data_simulasi_50_siswa_20_soal.xlsx - Sheet1.csv')
     return df
 
 df = load_data()
@@ -68,3 +68,4 @@ if selected_soal:
 
 st.sidebar.info(f"Total Siswa: {len(df)}")
 st.sidebar.info(f"Total Soal: {len(df.columns) - 1}")
+
